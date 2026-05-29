@@ -1,1 +1,1 @@
-Shell Basics
+This repo contains shell basics scripts
