@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -empty -type f -printf "%f\n"
+find "${1:-.}" -maxdepth 1 -empty -type f -printf "%f\n"
