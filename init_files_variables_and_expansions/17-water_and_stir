@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c "s=sum([{\"w\":0,\"a\":1,\"t\":2,\"e\":3,\"r\":4}[c] for c in\"$WATER\"]+[{\"s\":0,\"t\":1,\"i\":2,\"r\":3,\".\":4}[c]for c in\"$STIR\"]);b=\"bestchol\";r=\"\"\nexec(\"while s:r=b[s%8]+r;s//=8\")\nprint(r)"
+python3 -c "import sys\nw=str.maketrans(\"water\",\"01234\")\ns=str.maketrans(\"stir.\",\"01234\")\nt=str.maketrans(\"01234567\",\"bestchol\")\nn=int(\"$WATER\".translate(w),5)+int(\"$STIR\".translate(s),5)\nprint(oct(n)[2:].translate(t))"
