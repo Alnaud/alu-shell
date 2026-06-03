@@ -1,3 +1,2 @@
 #!/bin/bash
-python3 -c "import sys
-print(oct(int(sys.argv[1].translate(str.maketrans(\"water\",\"01234\")),5)+int(sys.argv[2].translate(str.maketrans(\"stir.\",\"01234\")),5))[2:].translate(str.maketrans(\"01234567\",\"bestchol\")))" "$WATER" "$STIR"
+python3 -c "print(oct(int(\"$WATER\".translate(str.maketrans(\"water\",\"01234\")),5)+int(\"$STIR\".translate(str.maketrans(\"stir.\",\"01234\")),5))[2:].translate(str.maketrans(\"01234567\",\"bestchol\")))"
