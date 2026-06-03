@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1 | sort -k1.1
+find . -maxdepth 1 -empty -type f -printf "%f\n"
