@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(python3 -c "w=str.maketrans'water','01234');s=str.maketrans('stir.','01234');r=str.maketrans('01234567','bestchol');print((str(int('$WATER'.translate(w),5)+int('$STIR'.translate(s),5)).translate(r))" )
+printf "%s\n" $(python3 -c "a=int(\"$WATER\".translate(str.maketrans(\"water\",\"01234\")),5)+int(\"$STIR\".translate(str.maketrans(\"stir.\",\"01234\")),5);r=\"\"\nexec(\"while a:\\n r=\\\"bestchol\\\"[a%8]+r\\n a//=8\")\nprint(r)")
