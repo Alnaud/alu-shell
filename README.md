@@ -1,1 +1,3 @@
-This repo contains shell basics scripts
+# ALU Shell Projects
+
+This repository contains Bash scripting projects covering shell basics, loops, conditions, parsing, processes and signals.
